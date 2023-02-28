@@ -136,6 +136,38 @@ header {
     }
 }
 
+#projects{
+    padding: 141px 349px;
+    h2 {
+        margin-bottom: 100px;
+    }
+}
+
+#contact{
+    padding: 141px 349px;
+    text-align: center;
+    .section_title{
+        width: 180px;
+        margin-bottom: 64px;
+    }
+    h3{
+        font: 80px/111px $vollkorn;
+        color: $hn_orange;
+        margin: 0 auto;
+    }
+    p{
+        margin: 0 auto 108px;
+        color: $hn_text;
+        font: 26px/35px $nunito_sans;
+        width: 683px;
+    }
+}
+
+.typing{
+    border-right: 2px solid $hn_white;
+    animation: typing 3s steps(12, end), cursor .5s steps(12, end) infinite;
+}
+
 .hu__hu__ {
     animation: hu__hu__ infinite 6s ease-in-out !important;
 }
@@ -170,4 +202,15 @@ section:nth-child(odd){
 
 section:nth-child(even){
     background-color: $hn_light_gray;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: $hn_light_gray;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: $hn_gray;
+    border-radius: 8px;
+    width: 16px;
 }

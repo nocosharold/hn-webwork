@@ -17,6 +17,8 @@ $vollkorn: 'Vollkorn', serif;
 
 html{
     scroll-behavior: smooth;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 
@@ -43,8 +45,10 @@ header {
             gap: 45px;
             li{
                 a{
+                    border-bottom: 1px solid transparent;
+                    padding-bottom: 4px;
                     &:hover {
-                        color: $hn_orange;
+                        border-bottom: 1px solid $hn_orange;
                     }
                     color: $hn_white;
                     text-decoration: none;
@@ -131,15 +135,122 @@ header {
     p{
         color: $hn_text;
         font: 24px/33px $nunito_sans;
-        // text-align: center;
         margin-bottom: 24px;
     }
 }
 
 #projects{
     padding: 141px 349px;
-    h2 {
+    .section_title {
         margin-bottom: 100px;
+    }
+    .project_details:nth-child(odd){
+        list-style: none;
+        margin-bottom: 46px;
+        a {
+            text-decoration: none;
+            position: relative;
+        }
+        .project_image{
+            width: 634px;
+        }
+        .project_text{
+            position: absolute;
+            top: -442px;
+            right: -580px;
+            .project_title {
+                    text-align: right;
+                    font: 40px/56px $vollkorn;
+                    color: $hn_white;
+                }
+                .project_brief {
+                    font: 24px/33px $nunito_sans;
+                    color: $hn_text;
+                    background-color: $hn_light_gray;
+                    border-radius: 8px;
+                    padding: 32px;
+                    width: 634px;
+                    text-align: right;
+                    margin: 0 0 24px auto;
+                }
+                .project_tech{
+                    display: flex;
+                    color: $hn_orange;
+                    font: 24px/33px $nunito_sans;
+                    justify-content: flex-end;
+                    li{
+                        list-style: none;
+                        margin-left: 20px;
+                    }
+                }
+        }
+        .github_logo {
+            display: block;
+            text-align: right;
+            transition: all 0.21s ease-in-out;
+            transform: translateY(-52px);
+            &:hover{
+
+                filter: brightness(160%);
+            }
+        }
+    }
+    .project_details:nth-child(even){
+        list-style: none;
+        margin-bottom: 46px;
+        a {
+            text-decoration: none;
+            position: relative;
+        }
+        .project_image{
+            width: 634px;
+            transform: translateX(580px);
+        }
+        .project_text{
+            position: absolute;
+            top: -442px;
+            left: 0;
+            .project_title {
+                    text-align: left;
+                    font: 40px/56px $vollkorn;
+                    color: $hn_white;
+                }
+                .project_brief {
+                    font: 24px/33px $nunito_sans;
+                    color: $hn_text;
+                    background-color: $hn_light_gray;
+                    border-radius: 8px;
+                    padding: 32px;
+                    width: 634px;
+                    text-align: left;
+                    margin: 0 0 24px auto;
+                }
+                .project_tech{
+                    display: flex;
+                    color: $hn_orange;
+                    font: 24px/33px $nunito_sans;
+                    justify-content: flex-start;
+                    li{
+                        list-style: none;
+                        margin-right: 20px;
+                    }
+                }
+        }
+        .github_logo {
+            display: block;
+            text-align: left;
+            transition: all 0.21s ease-in-out;
+            transform: translateY(-52px);
+            &:hover{
+
+                filter: brightness(160%);
+            }
+        }
+    }
+    .btn{
+        display: block;
+        width: 145px;
+        margin: 0 auto;
     }
 }
 

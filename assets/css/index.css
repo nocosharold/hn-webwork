@@ -6,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 header {
@@ -35,13 +37,15 @@ header nav ul {
 }
 
 header nav ul li a {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 4px;
   color: #EEEEEE;
   text-decoration: none;
   transition: all 0.21s ease-in-out;
 }
 
 header nav ul li a:hover {
-  color: #FF851B;
+  border-bottom: 1px solid #FF851B;
 }
 
 #hero {
@@ -133,8 +137,135 @@ header nav ul li a:hover {
   padding: 141px 349px;
 }
 
-#projects h2 {
+#projects .section_title {
   margin-bottom: 100px;
+}
+
+#projects .project_details:nth-child(odd) {
+  list-style: none;
+  margin-bottom: 46px;
+}
+
+#projects .project_details:nth-child(odd) a {
+  text-decoration: none;
+  position: relative;
+}
+
+#projects .project_details:nth-child(odd) .project_image {
+  width: 634px;
+}
+
+#projects .project_details:nth-child(odd) .project_text {
+  position: absolute;
+  top: -442px;
+  right: -580px;
+}
+
+#projects .project_details:nth-child(odd) .project_text .project_title {
+  text-align: right;
+  font: 40px/56px "Vollkorn", serif;
+  color: #EEEEEE;
+}
+
+#projects .project_details:nth-child(odd) .project_text .project_brief {
+  font: 24px/33px "Nunito Sans", sans-serif;
+  color: #777777;
+  background-color: #222222;
+  border-radius: 8px;
+  padding: 32px;
+  width: 634px;
+  text-align: right;
+  margin: 0 0 24px auto;
+}
+
+#projects .project_details:nth-child(odd) .project_text .project_tech {
+  display: flex;
+  color: #FF851B;
+  font: 24px/33px "Nunito Sans", sans-serif;
+  justify-content: flex-end;
+}
+
+#projects .project_details:nth-child(odd) .project_text .project_tech li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+#projects .project_details:nth-child(odd) .github_logo {
+  display: block;
+  text-align: right;
+  transition: all 0.21s ease-in-out;
+  transform: translateY(-52px);
+}
+
+#projects .project_details:nth-child(odd) .github_logo:hover {
+  filter: brightness(160%);
+}
+
+#projects .project_details:nth-child(even) {
+  list-style: none;
+  margin-bottom: 46px;
+}
+
+#projects .project_details:nth-child(even) a {
+  text-decoration: none;
+  position: relative;
+}
+
+#projects .project_details:nth-child(even) .project_image {
+  width: 634px;
+  transform: translateX(580px);
+}
+
+#projects .project_details:nth-child(even) .project_text {
+  position: absolute;
+  top: -442px;
+  left: 0;
+}
+
+#projects .project_details:nth-child(even) .project_text .project_title {
+  text-align: left;
+  font: 40px/56px "Vollkorn", serif;
+  color: #EEEEEE;
+}
+
+#projects .project_details:nth-child(even) .project_text .project_brief {
+  font: 24px/33px "Nunito Sans", sans-serif;
+  color: #777777;
+  background-color: #222222;
+  border-radius: 8px;
+  padding: 32px;
+  width: 634px;
+  text-align: left;
+  margin: 0 0 24px auto;
+}
+
+#projects .project_details:nth-child(even) .project_text .project_tech {
+  display: flex;
+  color: #FF851B;
+  font: 24px/33px "Nunito Sans", sans-serif;
+  justify-content: flex-start;
+}
+
+#projects .project_details:nth-child(even) .project_text .project_tech li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+#projects .project_details:nth-child(even) .github_logo {
+  display: block;
+  text-align: left;
+  transition: all 0.21s ease-in-out;
+  transform: translateY(-52px);
+}
+
+#projects .project_details:nth-child(even) .github_logo:hover {
+  filter: brightness(160%);
+}
+
+#projects .btn {
+  display: block;
+  width: 145px;
+  margin: 0 auto;
 }
 
 #contact {

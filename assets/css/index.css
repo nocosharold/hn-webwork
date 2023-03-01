@@ -48,6 +48,10 @@ header nav ul li a:hover {
   border-bottom: 1px solid #FF851B;
 }
 
+header nav ul li.active .nav_item {
+  border-bottom: 1px solid #FF851B;
+}
+
 #hero {
   padding: 220px 102px 107px;
 }
@@ -120,7 +124,7 @@ header nav ul li a:hover {
 }
 
 #about {
-  padding: 141px 349px;
+  padding: 141px 0;
 }
 
 #about h2 {
@@ -128,6 +132,8 @@ header nav ul li a:hover {
 }
 
 #about p {
+  margin: 0 auto;
+  width: 858px;
   color: #777777;
   font: 24px/33px "Nunito Sans", sans-serif;
   margin-bottom: 24px;
@@ -153,6 +159,13 @@ header nav ul li a:hover {
 
 #projects .project_details:nth-of-type(odd) .project_image {
   width: 634px;
+  border: 1px solid transparent;
+  transition: all 0.21s ease-in-out;
+  border-radius: 15px;
+}
+
+#projects .project_details:nth-of-type(odd) .project_image:hover {
+  border: 1px solid #EEEEEE;
 }
 
 #projects .project_details:nth-of-type(odd) .project_text {
@@ -214,6 +227,13 @@ header nav ul li a:hover {
 #projects .project_details:nth-of-type(even) .project_image {
   width: 634px;
   transform: translateX(580px);
+  border: 1px solid transparent;
+  transition: all 0.21s ease-in-out;
+  border-radius: 15px;
+}
+
+#projects .project_details:nth-of-type(even) .project_image:hover {
+  border: 1px solid #EEEEEE;
 }
 
 #projects .project_details:nth-of-type(even) .project_text {
@@ -264,8 +284,9 @@ header nav ul li a:hover {
 
 #projects .btn {
   display: block;
-  width: 145px;
   margin: 0 auto;
+  width: 160px;
+  text-align: center;
 }
 
 #contact {
@@ -289,6 +310,82 @@ header nav ul li a:hover {
   color: #777777;
   font: 26px/35px "Nunito Sans", sans-serif;
   width: 683px;
+}
+
+footer {
+  background-color: #191919;
+  padding: 141px 102px 0;
+}
+
+footer .hn_logo {
+  margin-left: -12px;
+}
+
+footer .details_group {
+  display: flex;
+  gap: 205px;
+  padding: 74px 82px;
+}
+
+footer .details_group ul li {
+  font: 24px/36px "Nunito Sans", sans-serif;
+  color: #EEEEEE;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+footer .details_group ul li h3 {
+  font: 700 24px/36px "Nunito Sans", sans-serif;
+  color: #EEEEEE;
+}
+
+footer .details_group ul li a {
+  text-decoration: none;
+  color: #EEEEEE;
+  transition: all 0.21s ease-in-out;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 4px;
+}
+
+footer .details_group ul li a:hover {
+  border-bottom: 1px solid #FF851B;
+}
+
+footer .details_group .contacts .info {
+  margin-bottom: 2px;
+}
+
+footer .details_group .social_group h3 {
+  font: 700 24px/36px "Nunito Sans", sans-serif;
+  color: #EEEEEE;
+  margin-bottom: 20px;
+}
+
+footer .details_group .social_group .social_list {
+  display: flex;
+  gap: 20px;
+}
+
+footer .details_group .social_group .social_list li a {
+  border: none;
+}
+
+footer .details_group .social_group .social_list li img {
+  width: 42px;
+  border-radius: 50%;
+  transition: all 0.21s ease-in-out;
+}
+
+footer .details_group .social_group .social_list li img:hover {
+  opacity: 0.8;
+}
+
+.copyright {
+  background-color: #08090A;
+  text-align: center;
+  padding: 21px 0;
+  color: #777777;
+  font: 18px/36px "Nunito Sans", sans-serif;
 }
 
 .typing {

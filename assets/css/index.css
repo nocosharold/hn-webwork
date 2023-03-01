@@ -141,33 +141,33 @@ header nav ul li a:hover {
   margin-bottom: 100px;
 }
 
-#projects .project_details:nth-child(odd) {
+#projects .project_details:nth-of-type(odd) {
   list-style: none;
   margin-bottom: 46px;
 }
 
-#projects .project_details:nth-child(odd) a {
+#projects .project_details:nth-of-type(odd) a {
   text-decoration: none;
   position: relative;
 }
 
-#projects .project_details:nth-child(odd) .project_image {
+#projects .project_details:nth-of-type(odd) .project_image {
   width: 634px;
 }
 
-#projects .project_details:nth-child(odd) .project_text {
+#projects .project_details:nth-of-type(odd) .project_text {
   position: absolute;
   top: -442px;
   right: -580px;
 }
 
-#projects .project_details:nth-child(odd) .project_text .project_title {
+#projects .project_details:nth-of-type(odd) .project_text .project_title {
   text-align: right;
   font: 40px/56px "Vollkorn", serif;
   color: #EEEEEE;
 }
 
-#projects .project_details:nth-child(odd) .project_text .project_brief {
+#projects .project_details:nth-of-type(odd) .project_text .project_brief {
   font: 24px/33px "Nunito Sans", sans-serif;
   color: #777777;
   background-color: #222222;
@@ -178,57 +178,57 @@ header nav ul li a:hover {
   margin: 0 0 24px auto;
 }
 
-#projects .project_details:nth-child(odd) .project_text .project_tech {
+#projects .project_details:nth-of-type(odd) .project_text .project_tech {
   display: flex;
   color: #FF851B;
   font: 24px/33px "Nunito Sans", sans-serif;
   justify-content: flex-end;
 }
 
-#projects .project_details:nth-child(odd) .project_text .project_tech li {
+#projects .project_details:nth-of-type(odd) .project_text .project_tech li {
   list-style: none;
   margin-left: 20px;
 }
 
-#projects .project_details:nth-child(odd) .github_logo {
+#projects .project_details:nth-of-type(odd) .github_logo {
   display: block;
   text-align: right;
   transition: all 0.21s ease-in-out;
   transform: translateY(-52px);
 }
 
-#projects .project_details:nth-child(odd) .github_logo:hover {
+#projects .project_details:nth-of-type(odd) .github_logo:hover {
   filter: brightness(160%);
 }
 
-#projects .project_details:nth-child(even) {
+#projects .project_details:nth-of-type(even) {
   list-style: none;
   margin-bottom: 46px;
 }
 
-#projects .project_details:nth-child(even) a {
+#projects .project_details:nth-of-type(even) a {
   text-decoration: none;
   position: relative;
 }
 
-#projects .project_details:nth-child(even) .project_image {
+#projects .project_details:nth-of-type(even) .project_image {
   width: 634px;
   transform: translateX(580px);
 }
 
-#projects .project_details:nth-child(even) .project_text {
+#projects .project_details:nth-of-type(even) .project_text {
   position: absolute;
   top: -442px;
   left: 0;
 }
 
-#projects .project_details:nth-child(even) .project_text .project_title {
+#projects .project_details:nth-of-type(even) .project_text .project_title {
   text-align: left;
   font: 40px/56px "Vollkorn", serif;
   color: #EEEEEE;
 }
 
-#projects .project_details:nth-child(even) .project_text .project_brief {
+#projects .project_details:nth-of-type(even) .project_text .project_brief {
   font: 24px/33px "Nunito Sans", sans-serif;
   color: #777777;
   background-color: #222222;
@@ -239,26 +239,26 @@ header nav ul li a:hover {
   margin: 0 0 24px auto;
 }
 
-#projects .project_details:nth-child(even) .project_text .project_tech {
+#projects .project_details:nth-of-type(even) .project_text .project_tech {
   display: flex;
   color: #FF851B;
   font: 24px/33px "Nunito Sans", sans-serif;
   justify-content: flex-start;
 }
 
-#projects .project_details:nth-child(even) .project_text .project_tech li {
+#projects .project_details:nth-of-type(even) .project_text .project_tech li {
   list-style: none;
   margin-right: 20px;
 }
 
-#projects .project_details:nth-child(even) .github_logo {
+#projects .project_details:nth-of-type(even) .github_logo {
   display: block;
   text-align: left;
   transition: all 0.21s ease-in-out;
   transform: translateY(-52px);
 }
 
-#projects .project_details:nth-child(even) .github_logo:hover {
+#projects .project_details:nth-of-type(even) .github_logo:hover {
   filter: brightness(160%);
 }
 

@@ -144,7 +144,7 @@ header {
     .section_title {
         margin-bottom: 100px;
     }
-    .project_details:nth-child(odd){
+    .project_details:nth-of-type(odd){
         list-style: none;
         margin-bottom: 46px;
         a {
@@ -195,7 +195,7 @@ header {
             }
         }
     }
-    .project_details:nth-child(even){
+    .project_details:nth-of-type(even){
         list-style: none;
         margin-bottom: 46px;
         a {

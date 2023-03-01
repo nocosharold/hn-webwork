@@ -283,7 +283,7 @@ header nav ul li.active .nav_item {
 }
 
 #projects .btn {
-  display: block;
+  display: none;
   margin: 0 auto;
   width: 160px;
   text-align: center;

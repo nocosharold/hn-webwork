@@ -8,7 +8,7 @@ $(document).ready(function() {
         
         // Loop through each section and store its position relative to the document
         sections.each(function() {
-            sectionPositions[$(this).attr('id')] = $(this).offset().top - 78;
+            sectionPositions[$(this).attr('id')] = $(this).offset().top - 108;
         });
         
         // Add scroll event listener to window

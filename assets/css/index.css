@@ -52,6 +52,18 @@ header nav ul li.active .nav_item {
   border-bottom: 1px solid #FF851B;
 }
 
+@media only screen and (max-width: 425px) {
+  header nav {
+    margin: 0 24px;
+  }
+  header nav a img {
+    width: 93px;
+  }
+  header nav ul {
+    display: none;
+  }
+}
+
 #hero {
   padding: 220px 102px 107px;
 }
@@ -61,6 +73,7 @@ header nav ul li.active .nav_item {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 146px;
+  flex-wrap: wrap;
 }
 
 #hero .hero_group .profile_pic {
@@ -123,6 +136,29 @@ header nav ul li.active .nav_item {
   display: block;
 }
 
+@media only screen and (max-width: 425px) {
+  #hero {
+    padding: 48px 24px;
+  }
+  #hero .hero_group {
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+  #hero .hero_group .content h1,
+  #hero .hero_group .content h2 {
+    font: 32px/44px "Vollkorn", serif;
+  }
+  #hero .hero_group .content p {
+    font: 16px/22px "Nunito Sans", sans-serif;
+    width: 377px;
+  }
+  #hero .hero_group .content .btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
 #about {
   padding: 141px 0;
 }
@@ -137,6 +173,19 @@ header nav ul li.active .nav_item {
   color: #777777;
   font: 24px/33px "Nunito Sans", sans-serif;
   margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 425px) {
+  #about {
+    padding: 48px 0;
+  }
+  #about h2 {
+    margin-bottom: 48px;
+  }
+  #about p {
+    font: 16px/22px "Nunito Sans", sans-serif;
+    width: 377px;
+  }
 }
 
 #projects {
@@ -289,6 +338,84 @@ header nav ul li.active .nav_item {
   text-align: center;
 }
 
+@media only screen and (max-width: 425px) {
+  #projects {
+    padding: 48px 0;
+  }
+  #projects .section_title {
+    margin-bottom: 48px;
+  }
+  #projects .project_details:nth-of-type(odd) {
+    border-bottom: 1px solid #222222;
+  }
+  #projects .project_details:nth-of-type(odd) .project_image {
+    width: 377px;
+    margin: 0 24px 24px;
+    display: block;
+  }
+  #projects .project_details:nth-of-type(odd) .project_text {
+    position: relative;
+    top: unset;
+    right: unset;
+  }
+  #projects .project_details:nth-of-type(odd) .project_text .project_title {
+    text-align: center;
+    font: 32px/44px "Vollkorn", serif;
+    margin-bottom: 24px;
+  }
+  #projects .project_details:nth-of-type(odd) .project_text .project_brief {
+    font: 16px/22px "Nunito Sans", sans-serif;
+    padding: 32px;
+    width: 377px;
+    text-align: right;
+    margin: 0 24px 24px auto;
+  }
+  #projects .project_details:nth-of-type(odd) .project_text .project_tech {
+    font: 16px/33px "Nunito Sans", sans-serif;
+    margin: 0 24px 0 24px;
+  }
+  #projects .project_details:nth-of-type(odd) .github_logo {
+    text-align: left;
+    margin: -30px 0 0 24px;
+  }
+  #projects .project_details:nth-of-type(even) {
+    border-bottom: 1px solid #222222;
+  }
+  #projects .project_details:nth-of-type(even) .project_image {
+    transform: translateX(0px);
+    width: 377px;
+    margin: 24px;
+  }
+  #projects .project_details:nth-of-type(even) .project_text {
+    position: relative;
+    top: unset;
+    right: unset;
+  }
+  #projects .project_details:nth-of-type(even) .project_text .project_title {
+    text-align: center;
+    font: 32px/44px "Vollkorn", serif;
+    margin-bottom: 24px;
+  }
+  #projects .project_details:nth-of-type(even) .project_text .project_brief {
+    font: 16px/22px "Nunito Sans", sans-serif;
+    padding: 32px;
+    width: 377px;
+    text-align: left;
+    margin: 0 24px 24px auto;
+  }
+  #projects .project_details:nth-of-type(even) .project_text .project_tech {
+    font: 16px/33px "Nunito Sans", sans-serif;
+    margin: 0 24px 0 24px;
+  }
+  #projects .project_details:nth-of-type(even) .github_logo {
+    text-align: right;
+    margin: -30px 24px 0 0;
+  }
+  #projects .project_details:last-child {
+    border-bottom: 1px solid transparent;
+  }
+}
+
 #contact {
   padding: 141px 349px;
   text-align: center;
@@ -312,6 +439,23 @@ header nav ul li.active .nav_item {
   width: 683px;
 }
 
+@media only screen and (max-width: 425px) {
+  #contact {
+    padding: 48px 0;
+  }
+  #contact .section_title {
+    margin-bottom: 48px;
+  }
+  #contact .lets_code {
+    font: 32px/45px "Vollkorn", serif;
+  }
+  #contact p {
+    font: 16px/22px "Nunito Sans", sans-serif;
+    width: 377px;
+    margin-bottom: 48px;
+  }
+}
+
 footer {
   background-color: #191919;
   padding: 141px 102px 0;
@@ -322,6 +466,7 @@ footer .hn_logo {
 }
 
 footer .details_group {
+  flex-wrap: wrap;
   display: flex;
   gap: 205px;
   padding: 74px 82px;
@@ -380,6 +525,28 @@ footer .details_group .social_group .social_list li img:hover {
   opacity: 0.8;
 }
 
+@media only screen and (max-width: 425px) {
+  footer {
+    padding: 48px 24px;
+  }
+  footer .hn_logo {
+    width: 133px;
+  }
+  footer .details_group {
+    gap: 40px;
+    padding: 48px 0;
+  }
+  footer .details_group ul li {
+    font: 16px/22px "Nunito Sans", sans-serif;
+  }
+  footer .details_group ul li h3 {
+    font: 700 16px/22px "Nunito Sans", sans-serif;
+  }
+  footer .details_group .social_group h3 {
+    font: 700 16px/22px "Nunito Sans", sans-serif;
+  }
+}
+
 .copyright {
   background-color: #08090A;
   text-align: center;
@@ -391,6 +558,12 @@ footer .details_group .social_group .social_list li img:hover {
 .typing {
   border-right: 2px solid #EEEEEE;
   animation: typing 3s steps(12, end), cursor 0.5s steps(12, end) infinite;
+}
+
+@media only screen and (max-width: 425px) {
+  .typing {
+    width: 180px;
+  }
 }
 
 .hu__hu__ {

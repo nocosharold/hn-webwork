@@ -30,7 +30,7 @@ header {
     display: flex;
     box-shadow: $hn_shadow;
     z-index: 1;
-
+    
     nav{
         display: flex;
         align-items: center;
@@ -64,6 +64,20 @@ header {
             }
         }
     }
+
+    @media only screen and (max-width: 425px) {
+        nav{
+            margin: 0 24px;
+            a{
+                img{
+                    width: 93px;
+                }
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
 }
 
 #hero{
@@ -73,6 +87,7 @@ header {
         justify-content: space-evenly;
         align-items: center;
         margin-bottom: 146px;
+        flex-wrap: wrap;
         .profile_pic {
             min-width: 257px;
             max-height: 257px;
@@ -84,7 +99,6 @@ header {
             }
             h1 {
                 color: $hn_white;
-
                 span {
                     font: 16px/22px $nunito_sans;
                     display: block;
@@ -131,6 +145,28 @@ header {
             display: block;
         }
     }
+    @media only screen and (max-width: 425px) {
+        padding: 48px 24px;
+        .hero_group{
+            gap: 32px;
+            margin-bottom: 48px;
+            .content{
+                h1,
+                h2 {
+                    font: 32px/44px $vollkorn;
+                }
+                p{
+                    font: 16px/22px $nunito_sans;
+                    width: 377px;
+                }
+                .btn{
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
 }
 
 #about{
@@ -144,6 +180,16 @@ header {
         color: $hn_text;
         font: 24px/33px $nunito_sans;
         margin-bottom: 24px;
+    }
+    @media only screen and (max-width: 425px) {
+        padding: 48px 0;
+        h2{
+            margin-bottom: 48px;
+        }
+        p{
+            font: 16px/22px $nunito_sans;
+            width: 377px;
+        }
     }
 }
 
@@ -273,6 +319,88 @@ header {
         width: 160px;
         text-align: center;
     }
+    @media only screen and (max-width: 425px) {
+        padding: 48px 0;
+        .section_title {
+            margin-bottom: 48px;
+        }
+        .project_details:nth-of-type(odd){
+            border-bottom: 1px solid $hn_light_gray;
+            .project_image {
+                width: 377px;
+                margin: 0 24px 24px;
+                display: block;
+            }
+        
+            .project_text {
+                position: relative;
+                top: unset;
+                right: unset;
+
+                .project_title {
+                    text-align: center;
+                    font: 32px/44px $vollkorn;
+                    margin-bottom: 24px;
+                }
+        
+                .project_brief {
+                    font: 16px/22px $nunito_sans;
+                    padding: 32px;
+                    width: 377px;
+                    text-align: right;
+                    margin: 0 24px 24px auto;
+                }
+        
+                .project_tech {
+                    font: 16px/33px $nunito_sans;
+                    margin: 0 24px 0 24px;
+                }
+            }
+        
+            .github_logo {
+                text-align: left;
+                margin: -30px 0 0 24px;
+            }
+        }
+        .project_details:nth-of-type(even){
+            border-bottom: 1px solid $hn_light_gray;
+            .project_image {
+                transform: translateX(0px);
+                width: 377px;
+                margin: 24px;
+            }
+            .project_text {
+                position: relative;
+                top: unset;
+                right: unset;
+                .project_title {
+                    text-align: center;
+                    font: 32px/44px $vollkorn;
+                    margin-bottom: 24px;
+                }
+                .project_brief {
+                    font: 16px/22px $nunito_sans;
+                    padding: 32px;
+                    width: 377px;
+                    text-align: left;
+                    margin: 0 24px 24px auto;
+                }
+
+                .project_tech {
+                    font: 16px/33px $nunito_sans;
+                    margin: 0 24px 0 24px;
+                }
+            }
+
+            .github_logo {
+                text-align: right;
+                margin: -30px 24px 0 0;
+            }
+        }
+        .project_details:last-child{
+            border-bottom: 1px solid transparent;
+        }
+    }
 }
 
 #contact{
@@ -293,6 +421,20 @@ header {
         font: 26px/35px $nunito_sans;
         width: 683px;
     }
+    @media only screen and (max-width: 425px) {
+        padding: 48px 0;
+        .section_title {
+            margin-bottom: 48px;
+        }
+        .lets_code{
+            font: 32px/45px $vollkorn;
+        }
+        p{
+            font: 16px/22px $nunito_sans;
+            width: 377px;
+            margin-bottom: 48px;
+        }
+    }
 }
 
 footer{
@@ -302,6 +444,7 @@ footer{
         margin-left: -12px;
     }
     .details_group{
+        flex-wrap: wrap;
         display: flex;
         gap: 205px;
         padding: 74px 82px;
@@ -358,6 +501,29 @@ footer{
             
         }
     }
+    @media only screen and (max-width: 425px){
+        padding: 48px 24px;
+        .hn_logo{
+            width: 133px;
+        }
+        .details_group{
+            gap: 40px;
+            padding: 48px 0;
+            ul{
+                li {
+                    font: 16px/22px $nunito_sans;
+                    h3{
+                        font: 700 16px/22px $nunito_sans;
+                    }
+                }
+            }
+            .social_group{
+                h3{
+                    font: 700 16px/22px $nunito_sans;
+                }
+            }
+        }
+    }
 }
 
 .copyright {
@@ -372,6 +538,9 @@ footer{
 .typing{
     border-right: 2px solid $hn_white;
     animation: typing 3s steps(12, end), cursor .5s steps(12, end) infinite;
+    @media only screen and (max-width: 425px) {
+        width: 180px;
+    }
 }
 
 .hu__hu__ {

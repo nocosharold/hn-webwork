@@ -19,6 +19,7 @@ html{
     scroll-behavior: smooth;
     max-width: 1920px;
     margin: 0 auto;
+    min-width: 320px;
 }
 
 header {
@@ -150,6 +151,10 @@ header {
         .hero_group{
             gap: 32px;
             margin-bottom: 48px;
+            .profile_pic{
+                min-width: 160px;
+                max-height: 160px;
+            }
             .content{
                 h1,
                 h2 {
@@ -157,7 +162,7 @@ header {
                 }
                 p{
                     font: 16px/22px $nunito_sans;
-                    width: 377px;
+                    width: calc(100% - 48px);
                 }
                 .btn{
                     display: block;
@@ -188,7 +193,7 @@ header {
         }
         p{
             font: 16px/22px $nunito_sans;
-            width: 377px;
+            width: calc(100% - 48px);
         }
     }
 }
@@ -233,25 +238,27 @@ header {
                     text-align: right;
                     margin: 0 0 24px auto;
                 }
-                .project_tech{
-                    display: flex;
-                    color: $hn_orange;
-                    font: 24px/33px $nunito_sans;
-                    justify-content: flex-end;
-                    li{
-                        list-style: none;
-                        margin-left: 20px;
-                    }
-                }
         }
         .github_logo {
             display: block;
             text-align: right;
             transition: all 0.21s ease-in-out;
             transform: translateY(-52px);
+            margin-right: 8px;
             &:hover{
-
                 filter: brightness(160%);
+            }
+        }
+        .project_tech {
+            display: flex;
+            color: $hn_orange;
+            font: 24px/33px $nunito_sans;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            transform: translateY(-168px);
+            li {
+                list-style: none;
+                margin-left: 20px;
             }
         }
     }
@@ -291,16 +298,6 @@ header {
                     text-align: left;
                     margin: 0 0 24px auto;
                 }
-                .project_tech{
-                    display: flex;
-                    color: $hn_orange;
-                    font: 24px/33px $nunito_sans;
-                    justify-content: flex-start;
-                    li{
-                        list-style: none;
-                        margin-right: 20px;
-                    }
-                }
         }
         .github_logo {
             display: block;
@@ -310,6 +307,18 @@ header {
             &:hover{
 
                 filter: brightness(160%);
+            }
+        }
+        .project_tech {
+            display: flex;
+            color: $hn_orange;
+            font: 24px/33px $nunito_sans;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            transform: translateY(-168px);
+            li {
+                list-style: none;
+                margin-right: 20px;
             }
         }
     }
@@ -327,7 +336,7 @@ header {
         .project_details:nth-of-type(odd){
             border-bottom: 1px solid $hn_light_gray;
             .project_image {
-                width: 377px;
+                width: calc(100% - 48px);
                 margin: 0 24px 24px;
                 display: block;
             }
@@ -346,27 +355,28 @@ header {
                 .project_brief {
                     font: 16px/22px $nunito_sans;
                     padding: 32px;
-                    width: 377px;
+                    width: calc(100% - 48px);
                     text-align: right;
                     margin: 0 24px 24px auto;
-                }
-        
-                .project_tech {
-                    font: 16px/33px $nunito_sans;
-                    margin: 0 24px 0 24px;
                 }
             }
         
             .github_logo {
                 text-align: left;
-                margin: -30px 0 0 24px;
+                margin: 27px 0 0 24px;
+            }
+
+            .project_tech {
+                font: 16px/33px $nunito_sans;
+                margin: -41px 24px 24px 24px;
+                transform: translateY(0);
             }
         }
         .project_details:nth-of-type(even){
             border-bottom: 1px solid $hn_light_gray;
             .project_image {
                 transform: translateX(0px);
-                width: 377px;
+                width: calc(100% - 48px);
                 margin: 24px;
             }
             .project_text {
@@ -381,20 +391,23 @@ header {
                 .project_brief {
                     font: 16px/22px $nunito_sans;
                     padding: 32px;
-                    width: 377px;
+                    width: calc(100% - 48px);
                     text-align: left;
                     margin: 0 24px 24px auto;
                 }
 
-                .project_tech {
-                    font: 16px/33px $nunito_sans;
-                    margin: 0 24px 0 24px;
-                }
+                
             }
 
             .github_logo {
                 text-align: right;
-                margin: -30px 24px 0 0;
+                margin: 27px 24px 0 0;
+            }
+
+            .project_tech {
+                font: 16px/33px $nunito_sans;
+                margin: -41px 24px 24px 24px;
+                transform: translateY(0);
             }
         }
         .project_details:last-child{
@@ -431,7 +444,7 @@ header {
         }
         p{
             font: 16px/22px $nunito_sans;
-            width: 377px;
+            width: calc(100% - 48px);
             margin-bottom: 48px;
         }
     }

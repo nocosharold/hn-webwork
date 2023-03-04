@@ -238,10 +238,16 @@ header .hamburger_menu {
 
 #about p {
   margin: 0 auto;
-  width: calc(100% - 750px);
+  width: 863px;
   color: #777777;
   font: 24px/33px "Nunito Sans", sans-serif;
   margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 950px) {
+  #about p {
+    width: calc(100% - 48px);
+  }
 }
 
 @media only screen and (max-width: 768px) {

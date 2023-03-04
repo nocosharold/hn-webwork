@@ -247,10 +247,15 @@ header {
     }
     p{
         margin: 0 auto;
-        width: calc(100% - 750px);;
+        width: 863px;
         color: $hn_text;
         font: 24px/33px $nunito_sans;
         margin-bottom: 24px;
+    }
+    @media only screen and (max-width: 950px) {
+        p{
+            width: calc(100% - 48px);
+        }
     }
     @media only screen and (max-width: 768px) {
         padding: 48px 0;

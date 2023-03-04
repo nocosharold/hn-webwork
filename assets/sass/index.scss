@@ -241,13 +241,13 @@ header {
 }
 
 #about{
-    padding: 141px 0;
+    padding: 141px 24px;
     h2{
         margin-bottom: 100px;
     }
     p{
         margin: 0 auto;
-        width: 858px;
+        width: calc(100% - 750px);;
         color: $hn_text;
         font: 24px/33px $nunito_sans;
         margin-bottom: 24px;
@@ -265,14 +265,16 @@ header {
 }
 
 #projects{
-    padding: 141px 349px;
+    padding: 141px 220px;
     .section_title {
         margin-bottom: 100px;
     }
     .project_details:nth-of-type(odd){
+        margin: 0 auto;
         list-style: none;
         margin-bottom: 46px;
         position: relative;
+        border-bottom: 1px solid $hn_light_gray;
         a {
             text-decoration: none;
             position: relative;
@@ -288,14 +290,14 @@ header {
         }
         .project_text{
             position: absolute;
-            top: -442px;
-            right: -580px;
+            top: 0;
+            right: 0px;
             .project_title {
-                    text-align: right;
-                    font: 40px/56px $vollkorn;
-                    color: $hn_white;
-                }
-                .project_brief {
+                text-align: right;
+                font: 40px/56px $vollkorn;
+                color: $hn_white;
+            }
+            .project_brief {
                     font: 24px/33px $nunito_sans;
                     color: $hn_text;
                     background-color: $hn_light_gray;
@@ -311,7 +313,6 @@ header {
             text-align: right;
             transition: all 0.21s ease-in-out;
             transform: translateY(-52px);
-            margin-right: 8px;
             &:hover{
                 filter: brightness(160%);
             }
@@ -324,6 +325,8 @@ header {
             flex-wrap: wrap;
             transform: translateY(-168px);
             gap: 20px;
+            position: absolute;
+            right: 0;
             li {
                 list-style: none;
                 background-color: $hn_gray;
@@ -332,32 +335,43 @@ header {
             }
         }
     }
-    .project_details:nth-of-type(even){
+    .project_details:nth-of-type(even) {
+        margin: 0 auto;
         list-style: none;
         margin-bottom: 46px;
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 512px;
+        border-bottom: 1px solid $hn_light_gray;
         a {
             text-decoration: none;
             position: relative;
         }
-        .project_image{
+
+        .project_image {
             width: 634px;
-            transform: translateX(580px);
             border: 1px solid transparent;
             transition: all 0.21s ease-in-out;
             border-radius: 15px;
+            position: relative;
+            right: 0;
+
             &:hover {
                 border: 1px solid $hn_white;
             }
         }
-        .project_text{
+        .project_info{
             position: absolute;
-            top: -442px;
+            z-index: 1;
             left: 0;
-            .project_title {
+            .project_text {
+                .project_title {
                     text-align: left;
                     font: 40px/56px $vollkorn;
                     color: $hn_white;
                 }
+        
                 .project_brief {
                     font: 24px/33px $nunito_sans;
                     color: $hn_text;
@@ -366,30 +380,33 @@ header {
                     padding: 32px;
                     width: 634px;
                     text-align: left;
-                    margin: 0 0 24px auto;
                 }
+            }
         }
+
         .github_logo {
             display: block;
             text-align: left;
             transition: all 0.21s ease-in-out;
-            transform: translateY(-52px);
-            &:hover{
-
+            transform: translateY(116px);
+            &:hover {
                 filter: brightness(160%);
             }
         }
+
         .project_tech {
             display: flex;
             color: $hn_orange;
             font: 24px/33px $nunito_sans;
             justify-content: flex-start;
             flex-wrap: wrap;
-            transform: translateY(-168px);
             gap: 20px;
+
             li {
-                background-color: $hn_gray;
                 list-style: none;
+                background-color: $hn_gray;
+                padding: 4px;
+                border-radius: 4px;
             }
         }
     }
@@ -399,144 +416,227 @@ header {
         width: 160px;
         text-align: center;
     }
-    @media only screen and (max-width: 1440px) {
-        padding: 100px 108px;
-    }
-    @media only screen and (max-width: 1281px) {
-        padding: 100px 24px;
+    @media only screen and (max-width: 1301px) {
+        padding: 48px;
         .project_details:nth-of-type(odd) {
-            .project_tech {
-                margin-right: 8px;
-            }
-        }
-    }
-    @media only screen and (max-width: 1024px) {
-        .project_details:nth-of-type(odd) {
-            .project_image {
-                width: 512px;
-            }
-        
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-bottom: 1px solid $hn_light_gray;
+            padding-bottom: 24px;
+            align-items: center;
+            height: unset;
             .project_text {
-                top: -408px;
-                right: -416px;
+                position: unset
             }
-        
-            .github_logo {
-                margin-right: 39px;
-            }
-        
             .project_tech {
-                transform: translateY(-148px);
-                margin: 0 40px 0 0;
-                font: 16px/22px $nunito_sans;
+                transform: translateY(0);
+                position: unset;
+            }
+            .github_logo{
+                transform: translateY(0);
+                margin-bottom: 24px;
             }
         }
         .project_details:nth-of-type(even) {
-            .project_image {
-                width: 512px;
-                transform: translateX(417px);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-bottom: 1px solid $hn_light_gray;
+            padding-bottom: 24px;
+            align-items: center;
+            height: unset;
+            .project_image{
+                position: unset;
             }
-            .project_text{
-                top: -357px;
+            .project_info{
+                position: unset;
             }
             .project_brief{
-                width: 512px;
+                margin-bottom: 24px;
             }
-            .project_tech{
-                transform: translateY(-65px);
-                font: 16px/22px $nunito_sans;
-            }
-            .github_logo{
-                transform: translateY(31px);
+            .github_logo {
+                transform: translateY(0);
+                margin-bottom: 24px;
             }
         }
     }
     @media only screen and (max-width: 768px) {
-        padding: 48px 0;
-        .section_title {
-            margin-bottom: 48px;
-        }
-        .project_details:nth-of-type(odd){
-            border-bottom: 1px solid $hn_light_gray;
-            .project_image {
-                width: calc(100% - 48px);
-                margin: 0 24px 24px;
-                display: block;
+        .project_details:nth-of-type(odd) {
+            .project_image{
+                width: 100%;
             }
-        
-            .project_text {
-                position: relative;
-                top: unset;
-                right: unset;
-
-                .project_title {
-                    text-align: center;
+            .project_text{
+                .project_title{
                     font: 32px/44px $vollkorn;
-                    margin-bottom: 24px;
                 }
-        
-                .project_brief {
+                .project_brief{
                     font: 16px/22px $nunito_sans;
-                    padding: 32px;
-                    width: calc(100% - 48px);
-                    text-align: right;
-                    margin: 0 24px 24px auto;
+                    width: 100%;
                 }
             }
-        
-            .github_logo {
-                text-align: left;
-                margin: 27px 0 0 24px;
-            }
-
-            .project_tech {
-                font: 16px/33px $nunito_sans;
-                margin: -41px 24px 24px 24px;
-                transform: translateY(0);
+            .project_tech{
+                font: 16px/22px $nunito_sans
             }
         }
-        .project_details:nth-of-type(even){
-            border-bottom: 1px solid $hn_light_gray;
+        .project_details:nth-of-type(even) {
             .project_image {
-                transform: translateX(0px);
-                width: calc(100% - 48px);
-                margin: 24px;
+                width: 100%;
             }
-            .project_text {
-                position: relative;
-                top: unset;
-                right: unset;
-                .project_title {
-                    text-align: center;
-                    font: 32px/44px $vollkorn;
-                    margin-bottom: 24px;
+            .project_info{
+                .project_text {
+                    .project_title {
+                        font: 32px/44px $vollkorn;
+                    }
+                    .project_brief {
+                        font: 16px/22px $nunito_sans;
+                        width: 100%;
+                    }
                 }
-                .project_brief {
-                    font: 16px/22px $nunito_sans;
-                    padding: 32px;
-                    width: calc(100% - 48px);
-                    text-align: left;
-                    margin: 0 24px 24px auto;
+                .project_tech {
+                    font: 16px/22px $nunito_sans
                 }
-
-                
             }
-
-            .github_logo {
-                text-align: right;
-                margin: 27px 24px 0 0;
-            }
-
-            .project_tech {
-                font: 16px/33px $nunito_sans;
-                margin: -41px 24px 24px 24px;
-                transform: translateY(0);
-            }
-        }
-        .project_details:last-child{
-            border-bottom: 1px solid transparent;
         }
     }
+    // @media only screen and (max-width: 1440px) {
+    //     padding: 100px 108px;
+    // }
+    // @media only screen and (max-width: 1281px) {
+    //     padding: 100px 24px;
+    //     .project_details:nth-of-type(odd) {
+    //         .project_tech {
+    //             margin-right: 8px;
+    //         }
+    //     }
+    // }
+    // @media only screen and (max-width: 1024px) {
+    //     .project_details:nth-of-type(odd) {
+    //         .project_image {
+    //             width: 512px;
+    //         }
+        
+    //         .project_text {
+    //             top: -408px;
+    //             right: -416px;
+    //         }
+        
+    //         .github_logo {
+    //             margin-right: 39px;
+    //         }
+        
+    //         .project_tech {
+    //             transform: translateY(-148px);
+    //             margin: 0 40px 0 0;
+    //             font: 16px/22px $nunito_sans;
+    //         }
+    //     }
+    //     .project_details:nth-of-type(even) {
+    //         .project_image {
+    //             width: 512px;
+    //             transform: translateX(417px);
+    //         }
+    //         .project_text{
+    //             top: -357px;
+    //         }
+    //         .project_brief{
+    //             width: 512px;
+    //         }
+    //         .project_tech{
+    //             transform: translateY(-65px);
+    //             font: 16px/22px $nunito_sans;
+    //         }
+    //         .github_logo{
+    //             transform: translateY(-51px);
+    //         }
+    //     }
+    // }
+    // @media only screen and (max-width: 768px) {
+    //     padding: 48px 0;
+    //     .section_title {
+    //         margin-bottom: 48px;
+    //     }
+    //     .project_details:nth-of-type(odd){
+    //         border-bottom: 1px solid $hn_light_gray;
+    //         .project_image {
+    //             width: calc(100% - 48px);
+    //             margin: 0 24px 24px;
+    //             display: block;
+    //         }
+        
+    //         .project_text {
+    //             position: relative;
+    //             top: unset;
+    //             right: unset;
+
+    //             .project_title {
+    //                 text-align: center;
+    //                 font: 32px/44px $vollkorn;
+    //                 margin-bottom: 24px;
+    //             }
+        
+    //             .project_brief {
+    //                 font: 16px/22px $nunito_sans;
+    //                 padding: 32px;
+    //                 width: calc(100% - 48px);
+    //                 text-align: right;
+    //                 margin: 0 24px 24px auto;
+    //             }
+    //         }
+        
+    //         .github_logo {
+    //             text-align: left;
+    //             margin: 27px 0 0 24px;
+    //         }
+
+    //         .project_tech {
+    //             font: 16px/33px $nunito_sans;
+    //             margin: -41px 24px 24px 24px;
+    //             transform: translateY(0);
+    //         }
+    //     }
+    //     .project_details:nth-of-type(even){
+    //         border-bottom: 1px solid $hn_light_gray;
+    //         .project_image {
+    //             transform: translateX(0px);
+    //             width: calc(100% - 48px);
+    //             margin: 24px;
+    //         }
+    //         .project_text {
+    //             position: relative;
+    //             top: unset;
+    //             right: unset;
+    //             .project_title {
+    //                 text-align: center;
+    //                 font: 32px/44px $vollkorn;
+    //                 margin-bottom: 24px;
+    //             }
+    //             .project_brief {
+    //                 font: 16px/22px $nunito_sans;
+    //                 padding: 32px;
+    //                 width: calc(100% - 48px);
+    //                 text-align: left;
+    //                 margin: 0 24px 24px auto;
+    //             }
+
+                
+    //         }
+
+    //         .github_logo {
+    //             text-align: right;
+    //             margin: 27px 24px 0 0;
+    //         }
+
+    //         .project_tech {
+    //             font: 16px/33px $nunito_sans;
+    //             margin: -41px 24px 24px 24px;
+    //             transform: translateY(0);
+    //         }
+    //     }
+    //     .project_details:last-child{
+    //         border-bottom: 1px solid transparent;
+    //     }
+    // }
 }
 
 #contact{

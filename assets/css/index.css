@@ -46,7 +46,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  border-bottom: 1px solid #FF851B;
+  border-bottom: 1px solid #777777;
 }
 
 header nav ul li.active .nav_item {

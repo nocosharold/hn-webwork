@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Vollkorn:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -36,8 +37,8 @@
     <main>
         <section id="hero">
             <div class="hero_group">
-                <img class="profile_pic" src="./assets/images/hn_profile_pic.png" alt="Harold Nocos Profile Smiling">
-                <div class="content">
+                <img class="profile_pic" src="./assets/images/hn_profile_pic.png" alt="Harold Nocos Profile Smiling" data-aos="fade-up" data-aos-duration="2000">
+                <div class="content" data-aos="fade-up" data-aos-duration="2000">
                     <h1><span>Hi there&excl; My name&rsquo;s</span>Harold Nocos.</h1>
                     <h2><span>I&rsquo;m a</span> Front End Dev</h2>
                     <p>I have the ability to bring your website to life with engaging and dynamic features that capture your
@@ -61,25 +62,33 @@
             </div>
         </section>
         <section id="about">
-            <h2 class="section_title">About Me</h2>
-            <p>My name is Harold, and I&rsquo;m a Front-end developer based in Pateros, Philippines. With over 2 years of experience in the
-            industry, I&rsquo;ve had the opportunity to work on a wide range of projects, from simple landing pages to complex web
-            applications. What I love most about web development is the ability to create something from scratch and watch it come
-            to life.</p>
-            <p>As a developer, my main objective is to enhance user experience and contribute to the betterment of the web. My focus is
-            on developing maintainable, scalable, and efficient applications. I stay up-to-date with the latest technologies by
-            constantly reading, watching, and experimenting with them, to apply modern solutions available in the market.</p>
-            <p>When I&rsquo;m not coding, you can find me playing online games, listening to music, or repairing some devices. I enjoy these
-            activities as they help me unwind and recharge my creativity. Additionally, I find that engaging in these hobbies often
-            provides me with new perspectives and ideas that I can bring to my work.</p>
+            <h2 class="section_title" data-aos="fade-down" data-aos-duration="2000">About Me</h2>
+            <div data-aos="fade-up" data-aos-duration="2000">
+                <p>
+                    My name is Harold, and I&rsquo;m a Front-end developer based in Pateros, Philippines. With over 2 years of experience in the
+                    industry, I&rsquo;ve had the opportunity to work on a wide range of projects, from simple landing pages to complex web
+                    applications. What I love most about web development is the ability to create something from scratch and watch it come
+                    to life.
+                </p>
+                <p>
+                    As a developer, my main objective is to enhance user experience and contribute to the betterment of the web. My focus is
+                    on developing maintainable, scalable, and efficient applications. I stay up-to-date with the latest technologies by
+                    constantly reading, watching, and experimenting with them, to apply modern solutions available in the market.
+                </p>
+                <p>
+                    When I&rsquo;m not coding, you can find me playing online games, listening to music, or repairing some devices. I enjoy these
+                    activities as they help me unwind and recharge my creativity. Additionally, I find that engaging in these hobbies often
+                    provides me with new perspectives and ideas that I can bring to my work.
+                </p>
+            </div>
+            
         </section>
         <section id="projects">
-            <h2 class="section_title">Projects</h2>
+            <h2 class="section_title" data-aos="fade" data-aos-duration="2000">Projects</h2>
             <ul>
-                <li class="project_details">
+                <li class="project_details" data-aos="fade-right" data-aos-duration="2000">
                     <a href="https://nocosharold.github.io/game-hub/" target="_blank">
                         <img class="project_image" src="https://ik.imagekit.io/1cqtok8fv7n/hn-portfolio/GameHubApp__xDSpkSoO.png?updatedAt=1682659915782" alt="Game Hub App">
-                        
                     </a>
                     <div class="project_info">
                         <div class="project_text">
@@ -98,7 +107,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="project_details">
+                <li class="project_details" data-aos="fade-left" data-aos-duration="2000">
                     <a href="https://realtime-chat-app-client.onrender.com/" target="_blank">
                         <img class="project_image" src="https://ik.imagekit.io/1cqtok8fv7n/hn-portfolio/Realtime_chat_app_4D1iDdNVK.png?updatedAt=1682563817058" alt="Realtime Chat App">
                         
@@ -120,7 +129,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="project_details">
+                <li class="project_details" data-aos="fade-right" data-aos-duration="2000">
                     <a href="https://nocosharold.github.io/JS-todo-list/" target="_blank">
                         <img class="project_image" src="https://ik.imagekit.io/1cqtok8fv7n/hn-portfolio/JS_todo_list_app_wH0MVfX6K.png?updatedAt=1682563294732" alt="JS To Do List">
                         
@@ -142,7 +151,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="project_details">
+                <li class="project_details" data-aos="fade-left" data-aos-duration="2000">
                     <a href="https://nocosharold.github.io/the_wall_december/" target="_blank">
                         <img class="project_image" src="https://ik.imagekit.io/1cqtok8fv7n/hn-portfolio/TheWallProject_s2Cotp8xS.png?updatedAt=1682566607148" alt="The Wall">
                         
@@ -168,7 +177,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="project_details">
+                <li class="project_details" data-aos="fade-right" data-aos-duration="2000">
                     <a href="https://nocosharold.github.io/space_impact/" target="_blank">
                         <img class="project_image" src="https://ik.imagekit.io/1cqtok8fv7n/hn-portfolio/space-impact_1Nef2tytS.png?ik-sdk-version=javascript-1.4.3&updatedAt=1677632188063" alt="Space Impact Project">
                         
@@ -195,7 +204,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="project_details">
+                <li class="project_details" data-aos="fade-left" data-aos-duration="2000">
                     <a href="https://nocosharold.github.io/pokemon-lite-js/" target="_blank">
                         <img class="project_image"
                             src="https://ik.imagekit.io/1cqtok8fv7n/hn-portfolio/pokemonlite_XVukBRkqC.png?updatedAt=1682566854869"
@@ -227,15 +236,15 @@
             <a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=nocosharold@gmail.com&tf=cm" class="btn">Show More</a>
         </section>
         <section id="contact">
-            <h2 class="section_title">Contact Me</h2>
+            <h2 class="section_title" data-aos="fade" data-aos-duration="2000">Contact Me</h2>
             <h3 class="lets_code">Let&rsquo;s Code!</h3>
-            <p>Let&rsquo;s keep in touch! Don&rsquo;t hesitate to send me an email and stay connected.</p>
-            <a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=nocosharold@gmail.com&tf=cm" class="btn">Send Me An Email</a>
+            <p data-aos="fade" data-aos-duration="2000">Let&rsquo;s keep in touch! Don&rsquo;t hesitate to send me an email and stay connected.</p>
+            <a data-aos="fade" data-aos-duration="2000" target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&to=nocosharold@gmail.com&tf=cm" class="btn">Send Me An Email</a>
         </section>
     </main>
     <footer>
-        <img class="hn_logo" src="https://ik.imagekit.io/1cqtok8fv7n/hn-portfolio/hn-logo-close_eW2yycICP.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1677549418034" alt="HN Closing tag">
-        <div class="details_group">
+        <img data-aos="fade" data-aos-duration="2000" class="hn_logo" src="https://ik.imagekit.io/1cqtok8fv7n/hn-portfolio/hn-logo-close_eW2yycICP.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1677549418034" alt="HN Closing tag">
+        <div data-aos="fade" data-aos-duration="2000" class="details_group">
             <ul class="links">
                 <li><h3>Useful Links</h3></li>
                 <li><a href="#">Home</a></li>
@@ -269,6 +278,7 @@
         </div>
     </footer>
     <p class="copyright">&copy; 2023 Harold Nocos</p>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
 </body>
 </html>

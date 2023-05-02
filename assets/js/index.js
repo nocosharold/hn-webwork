@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    AOS.init();
     $("body")
          // Get all section elements
         let sections = $('section');

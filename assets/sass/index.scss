@@ -165,12 +165,26 @@ header {
                 }
             }
 
-            h2 {
-                span {
-                    color: $hn_text;
-                }
+            #doing{
+                display: flex;
+                column-gap: 20px;
+                color: $hn_text;
+                height: 89px;
 
-                color: $hn_orange;
+                &.highlight{
+                    color: $hn_orange;
+                    &.typing{
+                        width: 580px;
+                    }
+                }
+                &.typing{
+                    width: 691px;
+                }
+                
+                #gonna_be{
+                    color: $hn_orange;
+                    max-width: 440px;
+                }
             }
 
             p {
@@ -229,6 +243,12 @@ header {
                     font: 16px/22px $nunito_sans;
                     width: calc(100% - 48px);
                 }
+                #doing{
+                    height: 44px;
+                    &.typing{
+                        width: 415px !important;
+                    }
+                }
                 .btn{
                     display: block;
                     text-align: center;
@@ -271,6 +291,7 @@ header {
 
 #projects{
     padding: 141px 220px;
+    overflow: hidden;
     .section_title {
         margin-bottom: 100px;
     }
@@ -504,144 +525,6 @@ header {
             }
         }
     }
-    // @media only screen and (max-width: 1440px) {
-    //     padding: 100px 108px;
-    // }
-    // @media only screen and (max-width: 1281px) {
-    //     padding: 100px 24px;
-    //     .project_details:nth-of-type(odd) {
-    //         .project_tech {
-    //             margin-right: 8px;
-    //         }
-    //     }
-    // }
-    // @media only screen and (max-width: 1024px) {
-    //     .project_details:nth-of-type(odd) {
-    //         .project_image {
-    //             width: 512px;
-    //         }
-        
-    //         .project_text {
-    //             top: -408px;
-    //             right: -416px;
-    //         }
-        
-    //         .github_logo {
-    //             margin-right: 39px;
-    //         }
-        
-    //         .project_tech {
-    //             transform: translateY(-148px);
-    //             margin: 0 40px 0 0;
-    //             font: 16px/22px $nunito_sans;
-    //         }
-    //     }
-    //     .project_details:nth-of-type(even) {
-    //         .project_image {
-    //             width: 512px;
-    //             transform: translateX(417px);
-    //         }
-    //         .project_text{
-    //             top: -357px;
-    //         }
-    //         .project_brief{
-    //             width: 512px;
-    //         }
-    //         .project_tech{
-    //             transform: translateY(-65px);
-    //             font: 16px/22px $nunito_sans;
-    //         }
-    //         .github_logo{
-    //             transform: translateY(-51px);
-    //         }
-    //     }
-    // }
-    // @media only screen and (max-width: 768px) {
-    //     padding: 48px 0;
-    //     .section_title {
-    //         margin-bottom: 48px;
-    //     }
-    //     .project_details:nth-of-type(odd){
-    //         border-bottom: 1px solid $hn_light_gray;
-    //         .project_image {
-    //             width: calc(100% - 48px);
-    //             margin: 0 24px 24px;
-    //             display: block;
-    //         }
-        
-    //         .project_text {
-    //             position: relative;
-    //             top: unset;
-    //             right: unset;
-
-    //             .project_title {
-    //                 text-align: center;
-    //                 font: 32px/44px $vollkorn;
-    //                 margin-bottom: 24px;
-    //             }
-        
-    //             .project_brief {
-    //                 font: 16px/22px $nunito_sans;
-    //                 padding: 32px;
-    //                 width: calc(100% - 48px);
-    //                 text-align: right;
-    //                 margin: 0 24px 24px auto;
-    //             }
-    //         }
-        
-    //         .github_logo {
-    //             text-align: left;
-    //             margin: 27px 0 0 24px;
-    //         }
-
-    //         .project_tech {
-    //             font: 16px/33px $nunito_sans;
-    //             margin: -41px 24px 24px 24px;
-    //             transform: translateY(0);
-    //         }
-    //     }
-    //     .project_details:nth-of-type(even){
-    //         border-bottom: 1px solid $hn_light_gray;
-    //         .project_image {
-    //             transform: translateX(0px);
-    //             width: calc(100% - 48px);
-    //             margin: 24px;
-    //         }
-    //         .project_text {
-    //             position: relative;
-    //             top: unset;
-    //             right: unset;
-    //             .project_title {
-    //                 text-align: center;
-    //                 font: 32px/44px $vollkorn;
-    //                 margin-bottom: 24px;
-    //             }
-    //             .project_brief {
-    //                 font: 16px/22px $nunito_sans;
-    //                 padding: 32px;
-    //                 width: calc(100% - 48px);
-    //                 text-align: left;
-    //                 margin: 0 24px 24px auto;
-    //             }
-
-                
-    //         }
-
-    //         .github_logo {
-    //             text-align: right;
-    //             margin: 27px 24px 0 0;
-    //         }
-
-    //         .project_tech {
-    //             font: 16px/33px $nunito_sans;
-    //             margin: -41px 24px 24px 24px;
-    //             transform: translateY(0);
-    //         }
-    //     }
-    //     .project_details:last-child{
-    //         border-bottom: 1px solid transparent;
-    //     }
-    // }
 }
 
 #contact{

@@ -150,12 +150,28 @@ header .hamburger_menu {
   color: #FF851B;
 }
 
-#hero .hero_group .content h2 {
+#hero .hero_group .content #doing {
+  display: flex;
+  column-gap: 20px;
+  color: #777777;
+  height: 89px;
+}
+
+#hero .hero_group .content #doing.highlight {
   color: #FF851B;
 }
 
-#hero .hero_group .content h2 span {
-  color: #777777;
+#hero .hero_group .content #doing.highlight.typing {
+  width: 580px;
+}
+
+#hero .hero_group .content #doing.typing {
+  width: 691px;
+}
+
+#hero .hero_group .content #doing #gonna_be {
+  color: #FF851B;
+  max-width: 440px;
 }
 
 #hero .hero_group .content p {
@@ -220,6 +236,12 @@ header .hamburger_menu {
     font: 16px/22px "Nunito Sans", sans-serif;
     width: calc(100% - 48px);
   }
+  #hero .hero_group .content #doing {
+    height: 44px;
+  }
+  #hero .hero_group .content #doing.typing {
+    width: 415px !important;
+  }
   #hero .hero_group .content .btn {
     display: block;
     text-align: center;
@@ -265,6 +287,7 @@ header .hamburger_menu {
 
 #projects {
   padding: 141px 220px;
+  overflow: hidden;
 }
 
 #projects .section_title {
